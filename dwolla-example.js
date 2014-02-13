@@ -4,7 +4,7 @@ var Main = require("./main.js")
 
 var whatever = function(err, data) {
 	if (err) {
-		console.log("Error: "+err+"\nTransaction ID: " + data);
+		console.log("Error: "+err+"\nTransaction ID: "+data)
 		return false
 	} else {
 		return true

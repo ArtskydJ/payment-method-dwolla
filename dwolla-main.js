@@ -2,10 +2,17 @@
 // 2014-02-06
 
 //Constructor
-module.exports = function(token, pin) {
+module.exports = function SimpleDwollaWrapper(token, pin) {
 	var dwolla = require('dwolla')
-	
-	this.chargeCreate = function(destinationId, amount, func) {
-		dwolla.send( token, pin, destinationId, amount, func)
+	return {
+		charge: function charge(destId, amount, cb) {
+			dwolla.send(token, pin, destId, amount, cb)
+		},
+		
+		details: function details(viewId, cb) {
+			return null
+		},
+		
+		id: "dwolla"
 	}
 }
