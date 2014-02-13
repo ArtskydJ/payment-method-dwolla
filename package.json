@@ -1,0 +1,31 @@
+{
+  "name": "payment-method-dwolla",
+  "version": "0.1",
+  "main": "./dwolla-main.js",
+  "author": {
+    "name": "ArtskydJ",
+    "email": "josephdykstra@gmail.com"
+  },
+  "description": "n/a",
+  "keywords": [
+    "dwolla",
+	"bank account",
+    "charger factory"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArtskydJ/payment-method-dwolla.git"
+  },
+  "devDependencies": {
+    "tap": "~0.4.8"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tap ./test/*.js"
+  },
+  "dependencies": {
+    "dwolla": "~0.1.1"
+  }
+}
