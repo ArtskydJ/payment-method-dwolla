@@ -1,6 +1,6 @@
 {
   "name": "payment-method-dwolla",
-  "version": "0.1",
+  "version": "0.1.3",
   "main": "./dwolla-main.js",
   "author": {
     "name": "ArtskydJ",

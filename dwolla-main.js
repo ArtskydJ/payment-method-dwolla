@@ -3,16 +3,15 @@
 
 //Constructor
 module.exports = function SimpleDwollaWrapper(token, pin) {
-	var dwolla = require('dwolla')
+
+	function charge(desc, amount, obj, cb) {
+		//do something with desc(ription)
+		var destId = obj[id]
+		require('dwolla').send(token, pin, destId, amount, cb)
+	}
+	
 	return {
-		charge: function charge(destId, amount, cb) {
-			dwolla.send(token, pin, destId, amount, cb)
-		},
-		
-		details: function details(viewId, cb) {
-			return null
-		},
-		
-		id: "dwolla"
+		id: 'dwolla',
+		charge: charge
 	}
 }

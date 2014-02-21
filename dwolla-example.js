@@ -1,13 +1,8 @@
-﻿var secret = require("../stripe-and-dwolla_sensitive-info/dwolla.js")
+﻿var secret = require("../#sensitive-info/dwolla.js")
 
-var Main = require("./main.js")
+var Dwolla = require("./dwolla-main.js")
 
 var whatever = function(err, data) {
-	if (err) {
-		console.log("Error: "+err+"\nTransaction ID: "+data)
-		return false
-	} else {
-		return true
-	}
+	var dwolla = new Dwolla(secret.token, secret.pin)
 }
 
